@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2f6fed">
+  <title>単語帳</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>単語帳</h1>
+  </header>
+
+  <main>
+    <!-- 今日の復習 -->
+    <section id="view-review" class="view">
+      <h2>今日の復習</h2>
+      <p class="placeholder">ここに今日復習するカードが表示されます（段階5で作ります）</p>
+    </section>
+
+    <!-- 単語の追加 -->
+    <section id="view-add" class="view" hidden>
+      <h2>単語を追加</h2>
+      <p class="placeholder">ここに追加フォームが表示されます（段階3で作ります）</p>
+    </section>
+
+    <!-- 単語一覧 -->
+    <section id="view-list" class="view" hidden>
+      <h2>単語一覧</h2>
+      <p class="placeholder">ここに単語の一覧が表示されます（段階4で作ります）</p>
+    </section>
+  </main>
+
+  <!-- 画面下のタブ（スマホで親指が届きやすい位置） -->
+  <nav class="tabbar">
+    <a href="#review" data-view="review">📖<span>復習</span></a>
+    <a href="#add" data-view="add">＋<span>追加</span></a>
+    <a href="#list" data-view="list">☰<span>一覧</span></a>
+  </nav>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
