@@ -7,6 +7,7 @@
   --primary: #2f6fed;
   --border: #e3e5e8;
   --error: #d93025;
+  --success: #1e8e3e;
   --tabbar-h: 64px;
 }
 
@@ -19,6 +20,7 @@
     --primary: #6b9bff;
     --border: #2e3238;
     --error: #ff7b72;
+    --success: #56d364;
   }
 }
 
@@ -74,6 +76,20 @@ body {
 .primary-button:disabled {
   opacity: 0.5;
 }
+.secondary-button {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--primary);
+  font-size: 16px;
+  cursor: pointer;
+}
+.secondary-button:active,
+.primary-button:active {
+  transform: scale(0.98);
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -85,6 +101,9 @@ body {
 .form h2 {
   margin: 0;
   font-size: 22px;
+}
+.form label small {
+  font-size: 12px;
 }
 .form label {
   display: flex;
@@ -110,6 +129,17 @@ body {
   outline: 2px solid var(--primary);
   border-color: transparent;
 }
+.form textarea {
+  resize: vertical;
+}
+.message {
+  margin: 0;
+  font-size: 15px;
+}
+.message.success {
+  color: var(--success);
+}
+.message.error,
 .error {
   margin: 0;
   color: var(--error);

@@ -44,8 +44,29 @@
 
       <!-- 単語の追加 -->
       <section id="view-add" class="view" hidden>
-        <h2>単語を追加</h2>
-        <p class="placeholder">ここに追加フォームが表示されます（段階3で作ります）</p>
+        <form id="add-form" class="form">
+          <h2>単語を追加</h2>
+          <label>
+            <span>英単語 <small>（必須）</small></span>
+            <input type="text" name="word" autocapitalize="off" autocorrect="off" spellcheck="false" required>
+          </label>
+          <button type="button" id="copy-prompt-button" class="secondary-button">📋 例文を聞く文章をコピー</button>
+          <p id="copy-message" class="message" hidden></p>
+          <label>
+            <span>意味（日本語） <small>（必須）</small></span>
+            <input type="text" name="meaning" required>
+          </label>
+          <label>
+            <span>例文 <small>（空欄でもOK）</small></span>
+            <textarea name="example" rows="3" autocapitalize="sentences"></textarea>
+          </label>
+          <label>
+            <span>例文の和訳 <small>（空欄でもOK）</small></span>
+            <textarea name="example_ja" rows="3"></textarea>
+          </label>
+          <p id="add-message" class="message" hidden></p>
+          <button type="submit" class="primary-button">追加する</button>
+        </form>
       </section>
 
       <!-- 単語一覧 -->
